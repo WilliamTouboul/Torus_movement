@@ -1,6 +1,6 @@
 html,
 body {
-    background: #161616;
+    background: linear-gradient(269.68deg, #0f0f0f 0.25%, #1a1624 27.93%, #1A1A1A 100.53%);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,12 +14,11 @@ h1 {
     font-weight: 700;
     color: white;
     text-transform: uppercase;
-    font-size: 160px;
+    font-size: 40px;
     width: 40%;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 10vw;
-    transform: translateY(-90%);
     z-index: 750;
 
 }
@@ -70,4 +69,8 @@ button:hover {
     position: absolute;
     top: 70%;
     left: 10vw;
+}
+
+#gui {
+    z-index: 999999;
 }

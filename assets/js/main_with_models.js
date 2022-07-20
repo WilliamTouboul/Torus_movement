@@ -32,7 +32,7 @@ scene.add(camera)
 var gltfLoader = new THREE.GLTFLoader();
 var global_ibex;
 
-var mymodel = gltfLoader.load('assets/3d_models/ibex/scene.gltf', function (gltf) {
+gltfLoader.load('assets/3d_models/ibex/scene.gltf', function (gltf) {
     ibex = gltf.scene;
     global_ibex = ibex;
     scene.add(ibex)
