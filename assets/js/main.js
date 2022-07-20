@@ -27,20 +27,23 @@ const mesh = new THREE.Mesh(geometry, material);
 // mesh.rotation.y = 0.5; //Rad, (1 = 1*pi = demi cercle.)
 scene.add(mesh);
 
-
-
 /* ---------------------------- Création Renderer --------------------------- */
 const renderer = new THREE.WebGLRenderer({
     alpha: 'true'
 });
 // Pour que le canvas prenne TOUTE la page.
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+// renderer.gammaOutput = true
+
 // On ajoute au BODY le "renderer.domElement", canvas généré par THREE.js
 document.body.append(renderer.domElement);
-//Creation du render avec la scene ET la camera.
 
 
 
+
+
+/* --------------------- Function pour réagir au scroll --------------------- */
 window.addEventListener('wheel', function (event) {
     if (event.deltaY < 0) {
         console.log('scrolling up');
