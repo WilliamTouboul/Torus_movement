@@ -1,45 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
 html,
 body {
-    background: linear-gradient(269.68deg, #0f0f0f 0.25%, #1a1624 27.93%, #1A1A1A 100.53%);
+    background: linear-gradient(269.68deg, #000000 0.25%, #1e1d20 27.93%, #000000 100.53%);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+    font-family: 'Cormorant SC', serif;
 }
 
-h1 {
-    font-family: sans-serif;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
-    font-size: 40px;
-    width: 40%;
-    position: absolute;
-    top: 20%;
-    left: 10vw;
-    z-index: 750;
-
-}
-
-h1 span {
-    animation: blink 0.8s infinite;
-
-}
-
-@keyframes blink {
-
-    0%,
-    49% {
-        opacity: 1
-    }
-
-    50%,
-    100% {
-        opacity: 0
-    }
-}
 
 canvas {
     position: absolute;
@@ -48,29 +20,86 @@ canvas {
     pointer-events: none;
 }
 
-button {
-    background-color: black;
+h1 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 32px;
     color: white;
-    font-family: sans-serif;
-    padding: 15px 30px;
-    border: 2px white solid;
-    margin-right: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
+    margin-left: 10vw;
+}
 
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    border: 1px red solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+p {
+    font-family: 'Cormorant SC', serif;
+    font-size: 16px;
+    color: white;
+    margin-left: 10vw;
+    width: 30%;
+}
+
+button {
+    font-family: 'Cormorant SC', serif;
+    color: white;
+    background-color: rgba(94, 94, 94, 0.541);
+    border: 1px white solid;
+    padding: 16px 32px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: white;
+    background-color: rgba(238, 238, 238, 0.541);
     color: black;
+
+}
+
+button:disabled,
+button[disabled] {
+    background-color: rgba(29, 29, 29, 0.541);
+    color: rgb(129, 129, 129);
+    border: 1px rgb(129, 129, 129) solid;
+    cursor: not-allowed;
 }
 
 .button_row {
     position: absolute;
-    top: 70%;
-    left: 10vw;
+    right: 0;
+    top: 32px;
 }
 
-#gui {
-    z-index: 999999;
+#p1 {
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+#p2 {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: -8vw;
+}
+
+#p3 {
+    opacity: 0;
+    position: absolute;
+    top: 48%;
+    left: -5vw;
+}
+
+#p4 {
+    opacity: 0;
+    position: absolute;
+    top: 25%;
+    right: 5vw;
 }

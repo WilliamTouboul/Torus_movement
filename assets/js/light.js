@@ -31,12 +31,10 @@ gui.add(light.target.position, 'y', 0, 10);
 
 
 
-
-
-
 var gui = new dat.GUI();
-gui.add(camera.position, 'x', -100, 100).step(0.5)
-gui.add(camera.position, 'y', -100, 100).step(0.5)
-gui.add(camera.position, 'z', -100, 100).step(0.5)
-gui.add(camera.rotation, 'y', -2, 2).step(0.1)
-gui.add(camera.rotation, 'x', -2, 2).step(0.1)
+gui.add(camera.position, 'x', -100, 100).step(0.5).name('pos x')
+gui.add(camera.position, 'y', -100, 100).step(0.5).name('pos y')
+gui.add(camera.position, 'z', -100, 100).step(0.5).name('pos Z')
+gui.add(camera.rotation, 'y', -2, 2).step(0.1).name('rotate y')
+gui.add(camera.rotation, 'x', -2, 2).step(0.1).name('rotate x')
+gui.add(camera.rotation, 'z', -2, 2).step(0.1).name('rotate z')
