@@ -187,6 +187,7 @@ document.querySelector('.button_4').addEventListener('click', function () {
     b3.disabled = true;
     b4.disabled = true;
     b2.disabled = false;
+    
     tl.to('#p4', {
         opacity: 0,
         y: -50

@@ -51,9 +51,11 @@ button {
     color: white;
     background-color: rgba(94, 94, 94, 0.541);
     border: 1px white solid;
-    padding: 16px 32px;
+    height: 60px;
+    width: 60px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 button:hover {
@@ -68,6 +70,7 @@ button[disabled] {
     color: rgb(129, 129, 129);
     border: 1px rgb(129, 129, 129) solid;
     cursor: not-allowed;
+
 }
 
 .button_row {
