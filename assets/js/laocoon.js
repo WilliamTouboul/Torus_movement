@@ -25,13 +25,6 @@ gltfLoader.load('assets/3d_models/laocoon/scene.gltf', function (gltf) {
 });
 
 
-var gui = new dat.GUI();
-gui.add(camera.position, 'x', -100, 100).step(0.5)
-gui.add(camera.position, 'y', -100, 100).step(0.5)
-gui.add(camera.position, 'z', -100, 100).step(0.5)
-gui.add(camera.rotation, 'y', -2, 2).step(0.1)
-gui.add(camera.rotation, 'x', -2, 2).step(0.1)
-
 
 /* ---------------------------- Création Renderer --------------------------- */
 const renderer = new THREE.WebGLRenderer({
