@@ -15,6 +15,17 @@ camera.position.x = -1
 // camera.position.y = 0.5
 // camera.position.z = 1.2
 
+// // patte
+// camera.position.x = -0.65
+// camera.position.y = -0.5
+// camera.position.z = 1.7
+
+// // patte
+// camera.position.x = -0.65
+// camera.position.y = -0.75
+// camera.position.z = 1.2
+
+
 scene.add(camera)
 
 
@@ -51,27 +62,51 @@ scene.add(light2.target);
 
 renderer.gammaOutput = true
 
-/* --------------------- Function pour réagir au scroll --------------------- */
-// window.addEventListener('wheel', function (event) {
-//     if (event.deltaY < 0) {
-//         console.log('scrolling up');
-//         mesh.rotation.x += 0.1
-//     } else if (event.deltaY > 0) {
-//         console.log('scrolling down');
-//         mesh.rotation.x += -0.1
-//     }
-// });
-
-
 document.querySelector('.button_1').addEventListener("click", function () {
-    console.log('tete');
     var tl = gsap.timeline();
+    tl.to(ibex.rotation, {
+        y: 0.25,
+        duration: 1
+    });
     tl.to(camera.position, {
         x: -0.5,
         y: 0.5,
-        z: 1.2
+        z: 1.2,
+        duration: 3.5, // Durée
+        ease: Power4.easeOut // Easing
+    });
+});
+
+
+document.querySelector('.button_2').addEventListener("click", function () {
+    var tl = gsap.timeline();
+    tl.to(ibex.rotation, {
+        y: -0.25,
+        duration: 1
     })
-})
+    tl.to(camera.position, {
+        x: -0.65,
+        y: -0.5,
+        z: 1.7,
+        duration: 3.5, // Durée
+        ease: Power4.easeOut // Easing
+    });
+});
+
+document.querySelector('.button_3').addEventListener("click", function () {
+    var tl = gsap.timeline();
+    tl.to(ibex.rotation, {
+        y: -1,
+        duration: 1
+    })
+    tl.to(camera.position, {
+        x: -0.65,
+        y: -0.75,
+        z: 1.2,
+        duration: 3.5, // Durée
+        ease: Power4.easeOut // Easing
+    });
+});
 
 
 const tick = () => {
@@ -80,4 +115,5 @@ const tick = () => {
     renderer.gammaOutput = true
     renderer.render(scene, camera)
 }
+
 tick();
